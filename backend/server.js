@@ -29,7 +29,7 @@ const PORT = process.env.PORT || 5000;
 
 // CORS configuration
 const corsOptions = {
-  origin: ['http://localhost:3000', 'http://localhost:8081', 'http://localhost:5173', 'https://university-management-system-dbms-live-uyvc.onrender.com'],
+  origin: ['http://localhost:3000', 'http://localhost:8081', 'http://localhost:5173', 'https://university-management-system-dbms-live-6o2z.onrender.com'],
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
   optionsSuccessStatus: 204,
