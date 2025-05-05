@@ -89,10 +89,10 @@ export const BackendDependencyNotice = () => {
         <AlertDescription className="flex-1 text-amber-700 dark:text-amber-300">
           The following features depend on the backend server:
           <ul className="list-disc list-inside ml-4 mt-1">
-            <li>Student management (add, edit, view)</li>
-            <li>Course management (add, edit, view)</li>
-            <li>Examination system (create, schedule)</li>
-            <li>Announcements (create, view)</li>
+            <li>Student → All Students → Student Management (add, edit, view)</li>
+            <li>Departments → Department Management (add, edit, view)</li>
+            <li>Announcements → All Announcements (create, edit, view)</li>
+            <li>Course → Course Management (create, schedule)</li>
           </ul>
           
           <div className="flex items-center gap-2 mt-2 text-sm">
