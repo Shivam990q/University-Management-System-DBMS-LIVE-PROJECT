@@ -10,7 +10,7 @@ import { ArrowLeft, ArrowRight, Save } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { useState, FormEvent, useEffect } from "react";
 import { Checkbox } from "@/components/ui/checkbox";
-import { examinationsAPI, coursesAPI } from "@/lib/api";
+import { examinationsAPI, coursesAPI, API_BASE_URL } from "@/lib/api";
 
 export default function CreateExam() {
   const navigate = useNavigate();
@@ -105,7 +105,7 @@ export default function CreateExam() {
       };
       
       // Submit to backend MongoDB API
-      const response = await fetch('http://localhost:5000/api/examinations', {
+      const response = await fetch(`${API_BASE_URL}/examinations`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { AlertCircle, Server, Database, ArrowRight, RefreshCw } from "lucide-react";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
+import { API_BASE_URL } from "@/lib/api";
 
 export const BackendDependencyNotice = () => {
   const [isOpen, setIsOpen] = useState(true);
@@ -13,7 +14,7 @@ export const BackendDependencyNotice = () => {
     const checkBackendStatus = async () => {
       try {
         // Try to connect to the backend health endpoint
-        const response = await fetch('http://localhost:5000/api/health', { 
+        const response = await fetch(`${API_BASE_URL}/health`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',

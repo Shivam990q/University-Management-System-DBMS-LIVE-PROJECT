@@ -12,7 +12,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState, FormEvent } from "react";
 import { Calendar as CalendarComponent } from "@/components/ui/calendar";
 import { format } from "date-fns";
-import { announcementsAPI } from "@/lib/api";
+import { announcementsAPI, API_BASE_URL } from "@/lib/api";
 
 export default function CreateAnnouncement() {
   const navigate = useNavigate();
@@ -83,7 +83,7 @@ export default function CreateAnnouncement() {
       };
       
       // Submit to backend MongoDB API
-      const response = await fetch('http://localhost:5000/api/announcements', {
+      const response = await fetch(`${API_BASE_URL}/announcements`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
